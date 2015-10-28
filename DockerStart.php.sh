@@ -12,7 +12,7 @@ SOURCE_FILE="dev0.server.local.php"
 DESTINATION="/myapp/htdocs/include/server.local.php"
 
 if [ ! -f $DESTINATION ]; then
-	case $PACDEVDB in
+	case $ENVDEVDB in
 		"dev1" )
 			SOURCE_FILE="dev1.server.local.php"
 			;;
