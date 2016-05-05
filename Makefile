@@ -99,7 +99,7 @@ endif
 # make sure the docker machine is running
 DOCKER_MACHINE_START := @echo "Docker machine '$(DOCKER_MACHINE)' already running"
 DOCKER_MACHINE_STATUS := $(shell docker-machine status $(DOCKER_MACHINE))
-ifneq ($(B2D_STAT),Running)
+ifneq ($(DOCKER_MACHINE_STATUS),Running)
 	DOCKER_MACHINE_START := docker-machine start $(DOCKER_MACHINE)
 endif
 
